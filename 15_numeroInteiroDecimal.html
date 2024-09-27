@@ -5,17 +5,16 @@
     Dica: utilize uma função de arredondamento.
     */
 
-   
-const numero = Number(prompt("Digite um número:"));
+    const numero = Number(prompt("Digite um número:")); 
 
+    let resultado;
 
-let resultado;
-
-if (numero === Math.round(numero)) {
-    resultado = "O número é inteiro.";
-} else {
-    resultado = "O número é decimal.";
-}
-alert(resultado);
-
+    // Verifica se o número é igual ao seu valor arredondado para baixo
+    if (numero === Math.floor(numero)) {
+        resultado = "O número é inteiro.";
+    } else {
+        resultado = "O número é decimal.";
+    }
+    
+    alert(resultado);
 </script>

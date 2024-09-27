@@ -7,57 +7,57 @@
     - inteiro ou decimal.
     */
 
-    //ENTRADA
     
-        
     const numero1 = Number(prompt("Digite o primeiro número: "));
-const numero2 = Number(prompt("Digite o segundo número: "));
-const operacao = prompt("Qual operação você deseja realizar? (+, -, *, /)");
-let resultado;
+    const numero2 = Number(prompt("Digite o segundo número: "));
+    const operacao = prompt("Qual operação você deseja realizar? (+, -, *, /)");
+    let resultado = 0; 
 
-if (operacao === "+") {
-    resultado = numero1 + numero2;
-} 
-if (operacao === "-") {
-    resultado = numero1 - numero2;
-} 
-if (operacao === "*") {
-    resultado = numero1 * numero2;
-} 
-if (operacao === "/") {
-    if (numero2 !== 0) {
-        resultado = numero1 / numero2;
+    let operacaoValida = true; 
+
+    if (operacao === "+") {
+        resultado = numero1 + numero2;
+    } 
+    else if (operacao === "-") {
+        resultado = numero1 - numero2;
+    } 
+    else if (operacao === "*") {
+        resultado = numero1 * numero2;
+    } 
+    else if (operacao === "/") {
+        if (numero2 !== 0) {
+            resultado = numero1 / numero2;
+        } else {
+            alert("Divisão por zero não é permitida.");
+            operacaoValida = false; 
+        }
     } else {
-        alert("Divisão por zero não é permitida.");
-    }
-} 
-
-if (resultado !== undefined) {
-    // Mostra o resultado da operação
-    alert(`O resultado da operação é: ${resultado}`);
-
-    // Verifica se o resultado é par ou ímpar
-    if (resultado % 2 === 0) {
-        alert("O resultado é par.");
-    } else {
-        alert("O resultado é ímpar.");
+        operacaoValida = false;
     }
 
-    // Verifica se o resultado é positivo ou negativo
-    if (resultado >= 0) {
-        alert("O resultado é positivo.");
-    } else {
-        alert("O resultado é negativo.");
-    }
+   
+    if (operacaoValida) {
+        alert(`O resultado da operação é: ${resultado}`);
 
-    // Verifica se o resultado é inteiro ou decimal
-    if (Number.isInteger(resultado)) {
-        alert("O resultado é inteiro.");
-    } else {
-        alert("O resultado é decimal.");
-    }
-} else {
-    alert("Operação inválida.");
-}
+        if (resultado % 2 === 0) {
+            alert("O resultado é par.");
+        } else {
+            alert("O resultado é ímpar.");
+        }
 
-    </script>
+        if (resultado >= 0) {
+            alert("O resultado é positivo.");
+        } else {
+            alert("O resultado é negativo.");
+        }
+
+        
+        if (resultado === Math.floor(resultado)) {
+            alert("O resultado é inteiro.");
+        } else {
+            alert("O resultado é decimal.");
+        }
+    } else {
+        alert("Operação inválida.");
+    }
+</script>
