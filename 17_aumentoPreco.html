@@ -9,12 +9,22 @@
     - acima de 1500: aumento de 5 %
     */
 
-    //ENTRADA
+    const preco = Number(prompt("Digite o preço do produto:")); 
+let aumento; 
+let novoPreco; 
 
-    
-    //PROCESSAMENTO
+if (preco <= 280) {
+    aumento = preco * 0.20; 
+} else if (preco <= 700) {
+    aumento = preco * 0.15; 
+} else if (preco <= 1500) {
+    aumento = preco * 0.10; 
+} else {
+    aumento = preco * 0.05; 
+}
 
-    
-    //SAÍDA
+novoPreco = preco + aumento; 
+alert("O aumento do preço é: R$ " + aumento.toFixed(2) + "\nNovo preço: R$ " + novoPreco.toFixed(2)); 
+
 
 </script>

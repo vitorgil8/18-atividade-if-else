@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
+const notaAntes = Number(prompt(`informe a nota do little brother antes da ajuda BB`))
+const notaDepois = Number(prompt(`informe a nota do littler brother depois da ajuda do BB`))
 
-    
     //PROCESSAMENTO
-    
+const diferenca = notaDepois - notaAntes;
+
+const bonificacao = diferenca * 0.25;
     
     //SAÍDA
-
+if (diferenca > 0) {
+    alert (`parabens você rebeu a bonificação de ${bonificacao} por ajudar seu colega`);
+}
+else {
+    alert(`você não recebeu nada`)
+}
 </script>

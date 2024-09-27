@@ -5,12 +5,42 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    const hemisferio = prompt("Em qual hemisfério você está? (norte/sul)").toLowerCase(); 
+const mes = prompt("Qual o mês atual? (1 a 12)"); 
 
+let estacao; 
 
-    //PROCESSAMENTO
+if (hemisferio === "norte") {
+    if (mes === "12" || mes === "1" || mes === "2") {
+        estacao = "Inverno"; 
+    } else if (mes === "3" || mes === "4" || mes === "5") {
+        estacao = "Primavera"; 
+    } else if (mes === "6" || mes === "7" || mes === "8") {
+        estacao = "Verão"; 
+    } else if (mes === "9" || mes === "10" || mes === "11") {
+        estacao = "Outono"; 
+    } else {
+        alert("Mês inválido! Por favor, insira um mês de 1 a 12."); 
+    }
+} else if (hemisferio === "sul") {
+    if (mes === "12" || mes === "1" || mes === "2") {
+        estacao = "Verão"; 
+    } else if (mes === "3" || mes === "4" || mes === "5") {
+        estacao = "Outono"; 
+    } else if (mes === "6" || mes === "7" || mes === "8") {
+        estacao = "Inverno"; 
+    } else if (mes === "9" || mes === "10" || mes === "11") {
+        estacao = "Primavera"; 
+    } else {
+        alert("Mês inválido! Por favor, insira um mês de 1 a 12."); 
+    }
+} else {
+    alert("Hemisfério inválido! Por favor, insira 'norte' ou 'sul'."); 
+}
 
-    
-    //SAÍDA
+if (estacao) {
+    alert("A estação do ano correspondente é: " + estacao); 
+}
+
 
 </script>

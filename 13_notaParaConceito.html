@@ -11,12 +11,31 @@
     Entre 5.9 e zero            E
     */
 
-    //ENTRADA
+   
+const nota = Number(prompt("Digite a nota (entre 0 e 10):"));
 
-    
-    //PROCESSAMENTO
 
-    
-    //SAÍDA
+let conceito;
+
+
+if (nota >= 9.0 && nota <= 10.0) {
+    conceito = "A";
+} else if (nota >= 8.0 && nota < 9.0) {
+    conceito = "B";
+} else if (nota >= 7.0 && nota < 8.0) {
+    conceito = "C";
+} else if (nota >= 6.0 && nota < 7.0) {
+    conceito = "D";
+} else if (nota >= 0 && nota < 6.0) {
+    conceito = "E";
+} else {
+    alert("Nota inválida. A nota deve estar entre 0 e 10.");
+}
+
+
+if (conceito) {
+    alert(`O conceito correspondente à nota ${nota} é: ${conceito}`);
+}
+
 
 </script>

@@ -8,11 +8,56 @@
     */
 
     //ENTRADA
-
-
-    //PROCESSAMENTO
-
     
-    //SAÍDA
+        
+    const numero1 = Number(prompt("Digite o primeiro número: "));
+const numero2 = Number(prompt("Digite o segundo número: "));
+const operacao = prompt("Qual operação você deseja realizar? (+, -, *, /)");
+let resultado;
 
-</script>
+if (operacao === "+") {
+    resultado = numero1 + numero2;
+} 
+if (operacao === "-") {
+    resultado = numero1 - numero2;
+} 
+if (operacao === "*") {
+    resultado = numero1 * numero2;
+} 
+if (operacao === "/") {
+    if (numero2 !== 0) {
+        resultado = numero1 / numero2;
+    } else {
+        alert("Divisão por zero não é permitida.");
+    }
+} 
+
+if (resultado !== undefined) {
+    // Mostra o resultado da operação
+    alert(`O resultado da operação é: ${resultado}`);
+
+    // Verifica se o resultado é par ou ímpar
+    if (resultado % 2 === 0) {
+        alert("O resultado é par.");
+    } else {
+        alert("O resultado é ímpar.");
+    }
+
+    // Verifica se o resultado é positivo ou negativo
+    if (resultado >= 0) {
+        alert("O resultado é positivo.");
+    } else {
+        alert("O resultado é negativo.");
+    }
+
+    // Verifica se o resultado é inteiro ou decimal
+    if (Number.isInteger(resultado)) {
+        alert("O resultado é inteiro.");
+    } else {
+        alert("O resultado é decimal.");
+    }
+} else {
+    alert("Operação inválida.");
+}
+
+    </script>
